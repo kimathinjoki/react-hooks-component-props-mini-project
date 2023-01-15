@@ -3,14 +3,15 @@ import Article from "./Article";
 
 
 
-function ArticleList(posts){
+function ArticleList({posts}){
 
-    const article = posts.map((articles)=>(<Article key={articles.id} title={articles.title} date={articles.date} preview={articles.preview} />))
+    const article = posts.map((post)=>{
+    return <Article key={post.id} title={post.title} date={post.date} preview={post.preview} />
+})
 
     return (
         <main>
             {article}
-
         </main>
       
     )
